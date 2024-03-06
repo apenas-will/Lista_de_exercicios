@@ -275,3 +275,52 @@ Agora, sua tarefa é escrever um código em JavaScript que crie as classes Funci
 - Para cada objeto, chame o método calcularSalario() e mostre o salário calculado no console.
 
 Certifique-se de explicar cada parte do código utilizando comentários, explicando para que serve cada atributo e método, bem como a lógica por trás do cálculo de salário para o tipo de funcionário Professor.
+
+**Resposta:**
+
+```
+// Cria a classe "Funcionario"
+class Funcionario {
+	constructor(nome, idade) {
+		this.nome = nome; // Salva o atributo "nome" do funcionário
+		this.idade = idade; // Salva o atributo "idade" do funcionário
+		this.salarioBase = 0; // Cria o atributo relativo ao salário do funcionário
+	}
+
+	calcularSalario() {} //Cria o método para calcular o salário do funcionário
+}
+
+// Cria uma classe filha de "Funcionario", a classe "Professor"
+class Professor extends Funcionario {
+	constructor(nome, idade, disciplina, preçoHoraAula, horasDeAula) {
+		super(); // Faz "Professor" herdar os atributos de "Funcionario"
+		this.nome = nome;
+		this.idade = idade;
+		this.salarioBase;
+
+		// Informações exclusivas dos professores
+		this.disciplina = disciplina; // Salva a "disciplina que o professor ensina"
+		this.preçoHoraAula = preçoHoraAula; // Preço que o professor cobra por uma hora de aula
+		this.horasDeAula = horasDeAula; // Quantas horas de aula o professor faz por mês
+	}
+
+    // Cria o método de calcular salário do professor
+	calcularSalario() {
+		// Calcula o salário base do professor, multiplicando quantas aulas ele faz por mês pelo preço da hora de cada uma delas
+		this.salarioBase = this.preçoHoraAula * this.horasDeAula;
+	}
+}
+
+// Cria os professores
+var professor1 = new Professor('Anderson', '42', 'Matemática', '30', '160');
+var professor2 = new Professor('Bernardo', '42', 'Geografia', '40', '120');
+
+// Calcula o salário dos professores
+professor1.calcularSalario();
+professor2.calcularSalario();
+
+// Mostra no console o salário base dos professores
+console.log(professor1.salarioBase);
+console.log(professor2.salarioBase);
+
+```
