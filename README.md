@@ -173,7 +173,6 @@ Dica: Utilize console.log() para exibir as informações!
 **Resposta:**
 
 ```
-
 // Cria a classe "Animal" com os atributos "nome" e "idade"
 class Animal {
 	constructor(nome, idade) {
@@ -196,16 +195,26 @@ class Gato extends Animal {
 		this.cor = cor;
 	}
 
+    // Cria o método "descrever()" com uma modificação exclusiva para os gatos
+    descrever(){
+        console.log(`Este animal é um ${this.nome} ${this.cor} e possui ${this.idade} anos.`)
+    }
+
+    //Cria o método "miar()" para os gatos, o qual imprime no console um miado
 	miar() {
-		console.log(`Miar`);
+		console.log(`Miau`);
 	}
 }
 
+// Cria objetos da classe // Cria dois objetos, um da classe Animal, chamado cachorro com 2 anos, e outro da classe Gato, chamado gato, com 3 anos e da cor laranja
 var cachorro = new Animal('cachorro', '2');
 var gato = new Gato('gato', '3', 'laranja');
 
+// Chama os métodos descrever para o cachorro e para o gato
 cachorro.descrever();
 gato.descrever();
+
+// Chama o método miar para o gato
 gato.miar();
 
 ```
@@ -237,26 +246,32 @@ Dica: Utilize console.log() para exibir as informações!
 
 **Resposta:**
 ```
+// Cria a classe "SomadorDeNotas" com o atributo "total", o qual armazenará a soma das notas
 class SomadorDeNotas {
 	constructor() {
 		this.total = 0;
 	}
 
+	// Cria o método "adicionarNota", o qual soma a nota inserida ao total
 	adicionarNota(nota) {
 		this.total += nota;
 	}
 
+	// Cria o método "verTotal", o qual imprime no console a soma total de todas as notas
 	verTotal() {
 		console.log(this.total);
 	}
 }
 
+// Cria um objeto da classe SomadorDeNotas
 var somador = new SomadorDeNotas();
 
+// Chama o método adicionarNota, passando vários valores para ele
 somador.adicionarNota(10);
 somador.adicionarNota(8);
 somador.adicionarNota(6);
 
+// Chama o método verTotal
 somador.verTotal();
 ```
 
