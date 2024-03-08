@@ -173,17 +173,21 @@ Dica: Utilize console.log() para exibir as informações!
 **Resposta:**
 
 ```
+
+// Cria a classe "Animal" com os atributos "nome" e "idade"
 class Animal {
 	constructor(nome, idade) {
 		this.nome = nome;
 		this.idade = idade;
 	}
 
+	//Cria o método "descrever()", o qual imprime no console uma descrição contendo o nome e a idade do animal
 	descrever() {
 		console.log(`Este animal é um ${this.nome} e possui ${this.idade} anos.`);
 	}
 }
 
+// Cria a classe "Gato" que herda os atributos de "Animal", adicionando o atributo "cor"
 class Gato extends Animal {
 	constructor(nome, idade, cor) {
 		super();
@@ -198,7 +202,7 @@ class Gato extends Animal {
 }
 
 var cachorro = new Animal('cachorro', '2');
-var gato = new Gato('gato', '3');
+var gato = new Gato('gato', '3', 'laranja');
 
 cachorro.descrever();
 gato.descrever();
