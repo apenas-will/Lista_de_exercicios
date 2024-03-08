@@ -119,20 +119,24 @@ Dica: Utilize `console.log()` para exibir as informações!
 **Resposta:**
 
 ```
+// Cria a classe "Animal" com os atributos "nome" e "idade"
 class Animal {
 	constructor(nome, idade) {
 		this.nome = nome;
 		this.idade = idade;
 	}
 
+	//Cria o método "descrever()", o qual imprime no console uma descrição contendo o nome e a idade do animal
 	descrever() {
 		console.log(`Este animal é um ${this.nome} e possui ${this.idade} anos.`);
 	}
 }
 
+// Cria dois objetos da classe Animal, um chamado cachorro e outro chamado gato, com 2 e 3 anos, respectivamente
 var cachorro = new Animal('cachorro', '2');
 var gato = new Animal('gato', '3');
 
+// Chama o método descrever() para o cachorro e para o gato
 cachorro.descrever();
 gato.descrever();
 ```
